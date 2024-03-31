@@ -52,7 +52,8 @@ export async function POST(req: NextRequest) {
     
     if (env.NODE_ENV === 'production') {
       await resend.emails.send({
-        from: emailConfig.from,
+        // from: emailConfig.from,
+        from: "onboarding@resend.dev",
         to: parsed.email,
         subject: '来自 cclucky 的订阅确认',
         react: ConfirmSubscriptionEmail({

@@ -4,7 +4,7 @@ import { asc, eq } from 'drizzle-orm'
 import { type NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
-import { emailConfig } from '~/config/email'
+// import { emailConfig } from '~/config/email'
 import { db } from '~/db'
 import {
   type CommentDto,
@@ -138,7 +138,8 @@ export async function POST(req: NextRequest, { params }: Params) {
         )
         if (primaryEmailAddress) {
           await resend.emails.send({
-            from: emailConfig.from,
+            // from: emailConfig.from,
+            from: "onboarding@resend.dev",
             to: primaryEmailAddress.emailAddress,
             subject: '👋 有人回复了你的评论',
             react: NewReplyCommentEmail({
