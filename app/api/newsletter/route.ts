@@ -38,7 +38,6 @@ export async function POST(req: NextRequest) {
       .select()
       .from(subscribers)
       .where(eq(subscribers.email, parsed.email))
-    console.log('------', subscriber)
 
     if (subscriber) {
       return NextResponse.json({ status: 'success' })
@@ -46,13 +45,14 @@ export async function POST(req: NextRequest) {
 
     // generate a random one-time token
     const token = crypto.randomUUID()
-    console.log('=======', env)
 
+    console.log("=======", env);
+    console.log("+++++++", emailConfig);
+    
+    
     if (env.NODE_ENV === 'production') {
-      console.log('+++++++', emailConfig)
       await resend.emails.send({
-        // from: emailConfig.from,
-        from: 'onboarding@resend.dev',
+        from: emailConfig.from,
         to: parsed.email,
         subject: '来自 cclucky 的订阅确认',
         react: ConfirmSubscriptionEmail({

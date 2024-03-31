@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs'
 import { type NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 
-// import { emailConfig } from '~/config/email'
+import { emailConfig } from '~/config/email'
 import { db } from '~/db'
 import { type GuestbookDto, GuestbookHashids } from '~/db/dto/guestbook.dto'
 import { fetchGuestbookMessages } from '~/db/queries/guestbook'
@@ -65,8 +65,7 @@ export async function POST(req: NextRequest) {
 
     if (env.NODE_ENV === 'production' && env.SITE_NOTIFICATION_EMAIL_TO) {
       await resend.emails.send({
-        // from: emailConfig.from,
-        from: "onboarding@resend.dev",
+        from: emailConfig.from,
         to: env.SITE_NOTIFICATION_EMAIL_TO,
         subject: '👋 有人刚刚在留言墙留言了',
         react: NewGuestbookEmail({

@@ -40,21 +40,9 @@ export default function CreateNewsletterPage() {
         .map((sub) => sub.email),
     ])
 
-    // await resend.emails.send({
-    //   subject: data.subject,
-    //   from: emailConfig.from,
-    //   to: env.SITE_NOTIFICATION_EMAIL_TO ?? [],
-    //   reply_to: emailConfig.from,
-    //   bcc: Array.from(subscriberEmails),
-    //   react: NewslettersTemplate({
-    //     subject: data.subject,
-    //     body: data.body,
-    //   }),
-    // })
-
     await resend.emails.send({
       subject: data.subject,
-      from: "onboarding@resend.dev",
+      from: emailConfig.from,
       to: env.SITE_NOTIFICATION_EMAIL_TO ?? [],
       reply_to: emailConfig.from,
       bcc: Array.from(subscriberEmails),
