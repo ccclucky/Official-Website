@@ -1,18 +1,18 @@
 import * as React from 'react'
 
-import { emailConfig } from '../config/email'
+// import { emailConfig } from '../config/email'
 import {
   Body,
   Container,
   Head,
   Hr,
   Html,
-  Img,
-  Link,
+  // Img,
+  // Link,
   Preview,
-  Section,
+  // Section,
   Tailwind,
-  Text,
+  // Text,
 } from './_components'
 
 export default function Layout({
@@ -34,7 +34,7 @@ export default function Layout({
 
           <Container className="mx-auto mt-[32px] w-[465px]">
             <Hr className="mx-0 my-[20px] h-px w-full bg-zinc-100" />
-            <Section>
+            {/* <Section>
               <Img
                 src={`${emailConfig.baseUrl}/icon.png`}
                 width="24"
@@ -47,7 +47,7 @@ export default function Layout({
                   href="https://cali.so"
                   className="text-zinc-700 underline"
                 >
-                  <strong>Cali Castle</strong>
+                  <strong>CC Castle</strong>
                 </Link>
                 <br />
                 开发者、设计师、细节控、创始人
@@ -81,7 +81,7 @@ export default function Layout({
                   哔哩哔哩
                 </Link>
               </Text>
-            </Section>
+            </Section> */}
           </Container>
         </Body>
       </Tailwind>
