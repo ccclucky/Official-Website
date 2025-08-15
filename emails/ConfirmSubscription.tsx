@@ -5,7 +5,7 @@ import { Button, Heading, Hr, Img, Link, Section, Text } from './_components'
 import Layout from './Layout'
 
 const ConfirmSubscriptionEmail = ({ link = 'link.com/confirm?fake-token' }) => {
-  const previewText = `确认订阅 Cali 的动态吗？`
+  const previewText = `确认订阅 cclucky 的动态吗？`
 
   return (
     <Layout previewText={previewText}>

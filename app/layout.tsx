@@ -14,11 +14,11 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | CC Castle',
     default: seo.title,
   },
   description: seo.description,
-  keywords: 'Cali,Cali Castle,郭晓楠,佐玩,创始人,CEO,开发者,设计师,细节控,创新',
+  keywords: 'cclucky,开发者,思考者,探索者,幸运的人',
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | CC Castle',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'CC Castle',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://www.cclove.eu.org',
   },
   twitter: {
     site: '@thecalicastle',
