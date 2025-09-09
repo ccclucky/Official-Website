@@ -14,7 +14,7 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | CC Blog',
+    template: '%s | CCLUCKY BLOG',
     default: seo.title,
   },
   description: seo.description,
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | CC Blog',
+      template: '%s | CCLUCKY BLOG',
     },
     description: seo.description,
-    siteName: 'CC Blog',
+    siteName: 'CCLUCKY BLOG',
     locale: 'zh_CN',
     type: 'website',
     url: 'https://www.cclove.eu.org',
