@@ -33,7 +33,7 @@ export default function BlogPage() {
           <Balancer>{description}</Balancer>
         </p>
         <p className="flex items-center">
-          <SocialLink href="https://github.com/ccclucky" platform="github" />
+          <SocialLink href="https://github.com/ccclucky" platform="github" className={"mr-2"} />
           <SocialLink href="mailto:jingc5946@gmail.com" platform="mail" />
         </p>
       </header>
