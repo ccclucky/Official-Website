@@ -1,4 +1,5 @@
 import React from 'react'
+import { type Metadata } from 'next'
 
 import { BlogPosts } from '~/app/(main)/blog/BlogPosts'
 import { Headline } from '~/app/(main)/Headline'
@@ -7,7 +8,21 @@ import { Photos } from '~/app/(main)/Photos'
 import { Resume } from '~/app/(main)/Resume'
 import { PencilSwooshIcon } from '~/assets'
 import { Container } from '~/components/ui/Container'
+import { seo } from '~/lib/seo'
 import { getSettings } from '~/sanity/queries'
+
+export const metadata: Metadata = {
+  title: seo.title,
+  description: seo.description,
+  openGraph: {
+    title: seo.title,
+    description: seo.description,
+  },
+  twitter: {
+    title: seo.title,
+    description: seo.description,
+  },
+}
 
 export default async function BlogHomePage() {
   const settings = await getSettings()

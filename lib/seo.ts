@@ -1,10 +1,10 @@
 export const seo = {
-  title: 'CCLUCKY BLOG | 开发者、思考者、探索者、幸运的人',
+  title: 'CCLUCKY BLOG | 思考者，程序猿，架构狂魔，探索者',
   description:
-    '我叫 cclucky，一名开发者，思考者，探索者，同时也是MetaBubble实验室的成员，目前带领着MetaBubble实验室致力于创造一个充满创造力的工作环境，同时鼓励团队创造影响世界的产品。',
+    '我叫 cclucky，一名思考者，程序猿，架构狂魔，探索者，全栈工程师，是MetaBubble实验室的成员，希望成为领域的先驱者、探索者，我热爱开发，架构，创新，思考，以及在未知领域中探索。',
   url: new URL(
     process.env.NODE_ENV === 'production'
-      ? 'https://www.cclove.eu.org'
+      ? 'https://www.cclucky.eu.org'
       : 'http://localhost:3000'
   ),
 } as const

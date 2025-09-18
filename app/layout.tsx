@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'CCLUCKY BLOG',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://www.cclove.eu.org',
+    url: 'https://www.cclucky.eu.org',
   },
   twitter: {
     site: '@thecalicastle',
