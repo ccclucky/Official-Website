@@ -1,5 +1,5 @@
-import React from 'react'
 import { type Metadata } from 'next'
+import React from 'react'
 
 import { BlogPosts } from '~/app/(main)/blog/BlogPosts'
 import { Headline } from '~/app/(main)/Headline'
