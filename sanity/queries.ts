@@ -132,3 +132,18 @@ export const getSettings = () =>
         }[]
       | null
   }>(getSettingsQuery())
+
+export const getPostsForSitemapQuery = () =>
+  groq`
+  *[_type == "post" && !(_id in path("drafts.**"))
+  && publishedAt <="${getDate().toISOString()}"
+  && defined(slug.current)] | order(publishedAt desc) {
+    "slug": slug.current,
+    publishedAt
+  }`
+
+export const getPostsForSitemap = () => {
+  return client.fetch<{ slug: string; publishedAt: string }[] | null>(
+    getPostsForSitemapQuery()
+  )
+}

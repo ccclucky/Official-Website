@@ -46,11 +46,15 @@ export async function POST(req: NextRequest) {
     // generate a random one-time token
     const token = crypto.randomUUID()
 
+    console.log("=======", env);
+    console.log("+++++++", emailConfig);
+    
+    
     if (env.NODE_ENV === 'production') {
       await resend.emails.send({
         from: emailConfig.from,
         to: parsed.email,
-        subject: '来自 Cali 的订阅确认',
+        subject: '来自 cclucky 的订阅确认',
         react: ConfirmSubscriptionEmail({
           link: url(`confirm/${token}`).href,
         }),

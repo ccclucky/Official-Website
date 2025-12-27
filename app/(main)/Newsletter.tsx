@@ -89,7 +89,7 @@ export function Newsletter({ subCount }: { subCount?: string }) {
             加入其他 <span className="font-medium">{subCount}</span> 位订阅者，
           </span>
         )}
-        <span>每月一封，随时可以取消订阅。</span>
+        <span>随时可以取消订阅。</span>
       </p>
       <AnimatePresence mode="wait">
         {!isSubscribed ? (
