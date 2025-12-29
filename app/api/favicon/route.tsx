@@ -13,13 +13,13 @@ function getKey(url: string) {
 
 const faviconMapper: { [key: string]: string } = {
   '((?:zolplay.cn)|(?:zolplay.com)|(?:cn.zolplay.com))':
-    'https://cali.so/favicons/zolplay.png',
-  '(?:github.com)': 'https://cali.so/favicons/github.png',
+    'https://cclucky.eu.org/favicons/zolplay.png',
+  '(?:github.com)': 'https://cclucky.eu.org/favicons/github.png',
   '((?:t.co)|(?:twitter.com)|(?:x.com))':
-    'https://cali.so/favicons/twitter.png',
-  'coolshell.cn': 'https://cali.so/favicons/coolshell.png',
-  'vercel.com': 'https://cali.so/favicons/vercel.png',
-  'nextjs.org': 'https://cali.so/favicons/nextjs.png',
+    'https://cclucky.eu.org/favicons/twitter.png',
+  'coolshell.cn': 'https://cclucky.eu.org/favicons/coolshell.png',
+  'vercel.com': 'https://cclucky.eu.org/favicons/vercel.png',
+  'nextjs.org': 'https://cclucky.eu.org/favicons/nextjs.png',
 }
 
 function getPredefinedIconForUrl(url: string): string | undefined {

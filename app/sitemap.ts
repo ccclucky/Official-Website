@@ -8,18 +8,26 @@ export default async function sitemap() {
     {
       url: url('/').href,
       lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
     },
     {
       url: url('/blog').href,
       lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: url('/projects').href,
       lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: url('/guestbook').href,
       lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
     },
   ] satisfies MetadataRoute.Sitemap
 
@@ -28,6 +36,8 @@ export default async function sitemap() {
     ? posts.map((post) => ({
         url: url(`/blog/${post.slug}`).href,
         lastModified: new Date(post.publishedAt),
+        changeFrequency: 'monthly',
+        priority: 0.8,
       }))
     : []
 

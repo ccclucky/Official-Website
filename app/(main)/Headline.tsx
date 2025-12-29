@@ -79,9 +79,11 @@ export function Headline() {
           delay: 0.1,
         }}
       >
-        <Balancer className='	text-wrap: wrap'>
+        <Balancer className="	text-wrap: wrap">
           我是 cclucky，全栈工程师，
-          <PeekabooLink href="https://github.com/MetaBubble207">MetaBubble实验室</PeekabooLink>
+          <PeekabooLink href="https://github.com/MetaBubble207">
+            MetaBubble实验室
+          </PeekabooLink>
           的成员，希望成为领域的先驱者、探索者，我热爱开发，架构，创新，思考，以及在未知领域中探索。
         </Balancer>
       </motion.p>
@@ -98,19 +100,9 @@ export function Headline() {
         }}
       >
         {/* <SocialLink
-          href="https://cali.so/twitter"
+          href="https://twitter.com/cclucky"
           aria-label="我的推特"
           platform="twitter"
-        />
-        <SocialLink
-          href="https://cali.so/youtube"
-          aria-label="我的 YouTube"
-          platform="youtube"
-        />
-        <SocialLink
-          href="https://cali.so/bilibili"
-          aria-label="我的 Bilibili"
-          platform="bilibili"
         /> */}
         <SocialLink
           // href="https://cali.so/github"
@@ -118,11 +110,11 @@ export function Headline() {
           aria-label="我的 GitHub"
           platform="github"
         />
-        {/* <SocialLink
-          href="https://cali.so/tg"
+        <SocialLink
+          href="https://t.me/cc_l_u_c_k_y"
           aria-label="我的 Telegram"
           platform="telegram"
-        /> */}
+        />
         {/* <SocialLink href="/feed.xml" platform="rss" aria-label="RSS 订阅" /> */}
         <SocialLink
           // href="mailto:hi@cali.so"

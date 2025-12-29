@@ -3,6 +3,7 @@ import './clerk.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 
 import { ThemeProvider } from '~/app/(main)/ThemeProvider'
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
     url: 'https://www.cclucky.eu.org',
   },
   twitter: {
-    site: '@thecalicastle',
-    creator: '@thecalicastle',
+    site: '@cclucky',
+    creator: '@cclucky',
     card: 'summary_large_image',
     title: seo.title,
     description: seo.description,
@@ -84,8 +85,37 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'Person',
+                  name: 'cclucky',
+                  url: 'https://cclucky.eu.org',
+                  logo: 'https://cclucky.eu.org/icon.png',
+                  sameAs: [
+                    'https://github.com/ccclucky',
+                    'https://twitter.com/cclucky',
+                    'https://t.me/cc_l_u_c_k_y',
+                  ],
+                }),
+              }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'WebSite',
+                  name: 'CCLUCKY BLOG',
+                  url: 'https://cclucky.eu.org',
+                }),
+              }}
+            />
           </ThemeProvider>
         </body>
+        <GoogleAnalytics gaId="G-X3L2REZD60" />
       </html>
     </ClerkProvider>
   )

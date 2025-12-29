@@ -42,8 +42,8 @@ export const generateMetadata = async ({
       title,
       description,
       card: 'summary_large_image',
-      site: '@thecalicastle',
-      creator: '@thecalicastle',
+      site: '@cclucky',
+      creator: '@cclucky',
     },
   } satisfies Metadata
 }
@@ -97,12 +97,34 @@ export default async function BlogPage({
   }
 
   return (
-    <BlogPostPage
-      post={post}
-      views={views}
-      relatedViews={relatedViews}
-      reactions={reactions.length > 0 ? reactions : undefined}
-    />
+    <>
+      <BlogPostPage
+        post={post}
+        views={views}
+        relatedViews={relatedViews}
+        reactions={reactions.length > 0 ? reactions : undefined}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.description,
+            image: [post.mainImage.asset.url],
+            datePublished: post.publishedAt,
+            author: [
+              {
+                '@type': 'Person',
+                name: 'cclucky',
+                url: 'https://cclucky.eu.org',
+              },
+            ],
+          }),
+        }}
+      />
+    </>
   )
 }
 
