@@ -114,10 +114,10 @@ export default function RootLayout({
                 }),
               }}
             />
+            <Analytics />
           </ThemeProvider>
         </body>
         <GoogleAnalytics gaId="G-X3L2REZD60" />
-        <Analytics />
       </html>
     </ClerkProvider>
   )
